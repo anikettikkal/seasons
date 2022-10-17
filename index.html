@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seasons</title>
+    <style>
+        .seasondiv{
+            height: 500px;
+            width:700px;
+            border:5px double grey;
+            margin-left: 330px;
+        }
+        .seasondiv-man{
+            background-image: url("https://as1.ftcdn.net/v2/jpg/03/66/09/14/1000_F_366091442_nzSDhVVSaVr4w3UNfx4fINWAjkBrfISI.jpg");
+            background-repeat: no-repeat;
+        }
+        .seasondiv-sum{
+            background-image: url("https://as2.ftcdn.net/v2/jpg/00/60/81/47/1000_F_60814755_i8YqJ74oKpYLd5fmVSlDWLm6r0Kngz5F.jpg");
+            background-repeat: no-repeat;
+        }
+        .seasondiv-win{
+            background-image: url("https://as1.ftcdn.net/v2/jpg/02/88/13/34/1000_F_288133412_IgUp3nEu917A3ZpxvTTJO6A59el8QYYY.jpg");
+            background-repeat: no-repeat;
+        }
+        .img{
+            padding-top: 50px;
+            padding-left: 200px;
+        }
+        .btn-container{
+            margin-top: 80px;
+            display: flex;
+            direction: row;
+            justify-content: space-evenly;
+        }
+        .btn{
+            border-radius: 30px;
+            height:50px;
+            width:100px;
+            border: 2px solid black;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn-win{
+            background-color: yellow;
+            color:white;
+        }
+        .btn-man{
+            background-color: blue;
+            color:white;
+        }
+        .btn-sum{
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <script>
+        function summerseason()
+        {
+            document.getElementById("season").src="https://cdn-icons-png.flaticon.com/512/2664/2664650.png";
+            document.getElementById("btn-sum").className = "btn btn-sum";
+            document.getElementById("btn-man").className = "btn";
+            document.getElementById("btn-win").className = "btn";
+            document.querySelector(".seasondiv").className = "seasondiv seasondiv-sum";
+
+        }
+        function mansoonseason()
+        {
+            document.getElementById("season").src="https://cdn-icons-png.flaticon.com/512/1405/1405988.png";
+            document.getElementById("btn-man").className = "btn btn-man";
+            document.getElementById("btn-sum").className = "btn";
+            document.getElementById("btn-win").className = "btn";
+            document.querySelector(".seasondiv").className = "seasondiv seasondiv-man";
+        }
+        function winterseason()
+        {
+            document.getElementById("season").src="https://cdn-icons-png.flaticon.com/512/3038/3038931.png";
+            document.getElementById("btn-win").className = "btn btn-win";
+            document.getElementById("btn-sum").className = "btn";
+            document.getElementById("btn-man").className = "btn";
+            document.querySelector(".seasondiv").className = "seasondiv seasondiv-win";
+        }
+    </script>
+</head>
+<body>
+    <div class="seasondiv">
+        <img class="img" id="season" src="https://cdn-icons-png.flaticon.com/512/3038/3038931.png", height="300px">
+        <div class="btn-container">
+            <button class="btn " id="btn-win" onclick="winterseason()">Winter</button>
+            <button class="btn " id="btn-sum" onclick="summerseason()">Summer</button>
+            <button class="btn " id="btn-man" onclick="mansoonseason()">Mansoon</button>
+        </div>
+    </div>
+</body>
+</html>
